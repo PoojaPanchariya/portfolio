@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.1787d413.css",
+    "main.js": "/portfolio/static/js/main.dccd9332.js",
+    "static/media/pooja.png": "/portfolio/static/media/pooja.1223937b4a0790b0bf57.png",
+    "index.html": "/portfolio/index.html",
+    "main.1787d413.css.map": "/portfolio/static/css/main.1787d413.css.map",
+    "main.dccd9332.js.map": "/portfolio/static/js/main.dccd9332.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1787d413.css",
+    "static/js/main.dccd9332.js"
+  ]
+}
