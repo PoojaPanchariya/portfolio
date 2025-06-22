@@ -85,12 +85,12 @@ const Contact = ({ theme }) => {
             </a>
             <a
               className="icon-box"
-              href="https://github.com/yourusername"
+              href="https://github.com/PoojaPanchariya"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub className="fa-github" />
-              github.com/yourusername
+             github.com/PoojaPanchariya
             </a>
           </div>
         </div>
