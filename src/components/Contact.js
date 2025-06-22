@@ -12,26 +12,26 @@ const Contact = ({ theme }) => {
 
     emailjs
       .sendForm(
-        "service_hmbibyf",
-        "template_aftq8hh",
+        "service_hmbibyf",       // EmailJS service ID
+        "template_aftq8hh",      // EmailJS template ID
         form.current,
-        "tNAqttSXNOHzQCWky"
+        "tNAqttSXNOHzQCWky"      // EmailJS public key
       )
       .then(
-        (result) => {
-          alert("Message sent successfully!");
+        () => {
+          alert("✅ Message sent successfully!");
           form.current.reset();
         },
         (error) => {
-          alert("Failed to send message. Please try again later.");
-          console.error(error.text);
+          alert("❌ Failed to send message. Please try again later.");
+          console.error("EmailJS error:", error.text);
         }
       );
   };
 
   return (
     <section id="contact" className={`text-center py-5 contact-section ${theme}`}>
-    <h2 className="section-title animate-slide-up">Contact Me</h2>
+      <h2 className="section-title animate-slide-up">Contact Me</h2>
       <div className="contact-grid">
         {/* Contact Form */}
         <div className="form-container animate-slide-up">
@@ -70,9 +70,14 @@ const Contact = ({ theme }) => {
               <FaEnvelope className="fa-envelope" />
               poojash0699@gmail.com
             </a>
-            <a className="icon-box"
-             href="tel:+917477265047">
-              <FaPhone className="fa-phone" /> +91-7477265047
+            <a
+              className="icon-box"
+              href="tel:+917477265047"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaPhone className="fa-phone" />
+              +91-7477265047
             </a>
             <a
               className="icon-box"
@@ -90,7 +95,7 @@ const Contact = ({ theme }) => {
               rel="noopener noreferrer"
             >
               <FaGithub className="fa-github" />
-             github.com/PoojaPanchariya
+              github.com/PoojaPanchariya
             </a>
           </div>
         </div>

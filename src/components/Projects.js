@@ -3,6 +3,8 @@ import './Projects.css';
 import { FaFileExcel, FaDatabase, FaFilePowerpoint, FaFilePdf, FaVideo, FaFileWord } from 'react-icons/fa';
 
 const Projects = ({ theme }) => {
+  const publicPath = process.env.PUBLIC_URL;
+
   return (
     <section className={`projects-section ${theme}`} id="projects">
       <div className="container">
@@ -24,10 +26,10 @@ const Projects = ({ theme }) => {
                   </div>
                 </div>
                 <div className="d-flex flex-row gap-2">
-                  <a href="/projects/banking-dashboard/data1.csv" className="btn-download" target="_blank" rel="noopener noreferrer">Excel 1</a>
-                  <a href="/projects/banking-dashboard/data2.csv" className="btn-download" target="_blank" rel="noopener noreferrer">Excel 2</a>
-                  <a href="/projects/banking-dashboard/data3.csv" className="btn-download" target="_blank" rel="noopener noreferrer">Excel 3</a>
-                  <a href="/projects/banking-dashboard/data4.csv" className="btn-download" target="_blank" rel="noopener noreferrer">Excel 4</a>
+                  <a href={`${publicPath}/projects/banking-dashboard/data1.csv`} className="btn-download" target="_blank" rel="noopener noreferrer">Excel 1</a>
+                  <a href={`${publicPath}/projects/banking-dashboard/data2.csv`} className="btn-download" target="_blank" rel="noopener noreferrer">Excel 2</a>
+                  <a href={`${publicPath}/projects/banking-dashboard/data3.csv`} className="btn-download" target="_blank" rel="noopener noreferrer">Excel 3</a>
+                  <a href={`${publicPath}/projects/banking-dashboard/data4.csv`} className="btn-download" target="_blank" rel="noopener noreferrer">Excel 4</a>
                 </div>
               </div>
             </div>
@@ -41,7 +43,7 @@ const Projects = ({ theme }) => {
                     <p className="pdf-desc">Query file for database operations.</p>
                   </div>
                 </div>
-                <a href="/projects/banking-dashboard/query.sql" className="btn-download" target="_blank" rel="noopener noreferrer">Download SQL</a>
+                <a href={`${publicPath}/projects/banking-dashboard/query.sql`} className="btn-download" target="_blank" rel="noopener noreferrer">Download SQL</a>
               </div>
             </div>
 
@@ -54,7 +56,7 @@ const Projects = ({ theme }) => {
                     <p className="pdf-desc">Power BI dashboard project file.</p>
                   </div>
                 </div>
-                <a href="/projects/banking-dashboard/report.pbix" className="btn-download" target="_blank" rel="noopener noreferrer">Download PBIX</a>
+                <a href={`${publicPath}/projects/banking-dashboard/report.pbix`} className="btn-download" target="_blank" rel="noopener noreferrer">Download PBIX</a>
               </div>
             </div>
 
@@ -67,7 +69,7 @@ const Projects = ({ theme }) => {
                     <p className="pdf-desc">Download all presentation slides in a single PDF file.</p>
                   </div>
                 </div>
-                <a href="/projects/banking-dashboard/banking-slides.pdf" className="btn-download" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                <a href={`${publicPath}/projects/banking-dashboard/banking-slides.pdf`} className="btn-download" target="_blank" rel="noopener noreferrer">Download Slides</a>
               </div>
             </div>
           </div>
@@ -89,8 +91,8 @@ const Projects = ({ theme }) => {
                   </div>
                 </div>
                 <div className="d-flex flex-row gap-2">
-                  <a href="/projects/hospital-dashboard/data1.csv" className="btn-download" target="_blank" rel="noopener noreferrer">Excel 1</a>
-                  <a href="/projects/hospital-dashboard/data2.xlsx" className="btn-download" target="_blank" rel="noopener noreferrer">Excel 2</a>
+                  <a href={`${publicPath}/projects/hospital-dashboard/data1.csv`} className="btn-download" target="_blank" rel="noopener noreferrer">Excel 1</a>
+                  <a href={`${publicPath}/projects/hospital-dashboard/data2.xlsx`} className="btn-download" target="_blank" rel="noopener noreferrer">Excel 2</a>
                 </div>
               </div>
             </div>
@@ -104,7 +106,7 @@ const Projects = ({ theme }) => {
                     <p className="pdf-desc">Power BI project file.</p>
                   </div>
                 </div>
-                <a href="/projects/hospital-dashboard/report.pbix" className="btn-download" target="_blank" rel="noopener noreferrer">Download PBIX</a>
+                <a href={`${publicPath}/projects/hospital-dashboard/report.pbix`} className="btn-download" target="_blank" rel="noopener noreferrer">Download PBIX</a>
               </div>
             </div>
 
@@ -117,7 +119,7 @@ const Projects = ({ theme }) => {
                     <p className="pdf-desc">Presentation file in PDF format.</p>
                   </div>
                 </div>
-                <a href="/projects/hospital-dashboard/hospital-slides.pdf" className="btn-download" target="_blank" rel="noopener noreferrer">Download Slides</a>
+                <a href={`${publicPath}/projects/hospital-dashboard/hospital-slides.pdf`} className="btn-download" target="_blank" rel="noopener noreferrer">Download Slides</a>
               </div>
             </div>
 
@@ -130,7 +132,7 @@ const Projects = ({ theme }) => {
                     <p className="pdf-desc">Detailed project documentation file.</p>
                   </div>
                 </div>
-                <a href="/projects/hospital-dashboard/documentation.docx" className="btn-download" target="_blank" rel="noopener noreferrer">Download DOCX</a>
+                <a href={`${publicPath}/projects/hospital-dashboard/documentation.docx`} className="btn-download" target="_blank" rel="noopener noreferrer">Download DOCX</a>
               </div>
             </div>
           </div>
@@ -147,7 +149,7 @@ const Projects = ({ theme }) => {
                 <div className="card-body">
                   <h5 className="card-title">Banking Dashboard</h5>
                   <video controls width="100%">
-                    <source src="/videos/banking-dashboard.mp4" type="video/mp4" />
+                    <source src={`${publicPath}/videos/banking-dashboard.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -158,7 +160,7 @@ const Projects = ({ theme }) => {
                 <div className="card-body">
                   <h5 className="card-title">Hospital Dashboard</h5>
                   <video controls width="100%">
-                    <source src="/videos/hospital-dashboard.mp4" type="video/mp4" />
+                    <source src={`${publicPath}/videos/hospital-dashboard.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
