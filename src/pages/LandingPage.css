@@ -1,0 +1,134 @@
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #5d8597, #ffffff, #d4aeae, #b37d7d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.landing-content {
+  max-width: 750px;
+  width: 100%;
+  background-color: rgba(216, 250, 22, 0.07); /* Glassmorphism */
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(2, 32, 9, 0.932);
+  text-align: center;
+  
+}
+
+.landing-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: rgb(85, 20, 69);
+}
+
+.landing-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color:#741a56;
+}
+.explore-text {
+  font-size: 1.1rem;
+  color: #741a56;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.landing-btn {
+  padding: 12px 28px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #01220a57; /* Stylish bright button */
+  color: #33042d;
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.landing-btn:hover {
+  background-color: #81436d;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: rgb(44, 40, 92);
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+/* Sliding animation */
+@keyframes slideInOut {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.sliding-text {
+  display: inline-block;
+  animation: slideInOut 3s ease-in-out infinite;
+}
+/* Floating animation */
+@keyframes floatText {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-text {
+  display: inline-block;
+  animation: floatText 3s ease-in-out infinite;
+}
+

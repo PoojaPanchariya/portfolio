@@ -1,43 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import DataAnalyst from "./pages/DataAnalyst";
+import FullStack from "./pages/FullStack";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
+
+console.log("LandingPage:", LandingPage);
+console.log("DataAnalyst:", DataAnalyst);
+console.log("FullStack:", FullStack);
+console.log("DataAnalyst typeof:", typeof DataAnalyst);  // ✅ should log "function"
+console.log("DataAnalyst:", DataAnalyst);                // ✅ should show the component code
+
 
 function App() {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    document.body.className = theme;
-    AOS.init({ duration: 1000 });
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
-  
-
   return (
-    <div className={`app ${theme}`} >
-      <Navbar toggleTheme={toggleTheme} theme={theme} />
-      <Hero theme={theme} />
-      <Projects theme={theme} />
-      <Skills theme={theme} />
-      <Resume theme={theme} />
-      <Contact theme={theme} />
-      <Footer theme={theme} />
-      
-        <ScrollToTop />
-      
-    </div>
+    <Router basename="/portfolio">
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/data-analyst" element={<DataAnalyst />} />
+        <Route path="/full-stack" element={<FullStack />} />
+      </Routes>
+    </Router>
   );
 }
 

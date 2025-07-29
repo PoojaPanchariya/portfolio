@@ -1,0 +1,154 @@
+/* Sticky transparent navbar with backdrop blur */
+.navbar-fs {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.navbar-logo-fs img {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.navbar-logo-fs img:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar links container */
+.navbar-links-fs {
+  display: flex;
+  gap: 24px;
+}
+
+/* All navbar links */
+.navbar-links-fs a {
+  color: #032b21;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover underline animation */
+.navbar-links-fs a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #051609;
+  transition: width 0.3s ease;
+}
+.navbar-links-fs a:hover::after {
+  width: 100%;
+}
+.navbar-links-fs a:hover {
+  color: #8b0618;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.bar {
+  width: 24px;
+  height: 3px;
+  background-color: #032b21;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Animate hamburger into X */
+.change-bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.change-bar2 {
+  opacity: 0;
+}
+.change-bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Blinking link with same style */
+.blink-link {
+  color: #032b21;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  animation: blink 1s infinite;
+  transition: all 0.3s ease;
+}
+
+.blink-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #051609;
+  transition: width 0.3s ease;
+}
+.blink-link:hover::after {
+  width: 100%;
+}
+.blink-link:hover {
+  color: #8b0618;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .navbar-links-fs {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 5%;
+    background: rgba(221, 226, 223, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .navbar-links-fs.open {
+    display: flex;
+  }
+
+  .navbar-links-fs a {
+    margin: 10px 0;
+    color: #032b21;
+  }
+
+  .blink-link {
+    width: 100%;
+    text-align: left;
+  }
+}

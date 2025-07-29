@@ -1,0 +1,138 @@
+.skillsfs-section {
+  padding: 4rem 2rem;
+ 
+}
+
+.skillsfs-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+   color: #1f2d1f;
+}
+
+.skillsfs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  color: #0c2413;
+  
+}
+
+.hard-skills {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+}
+
+
+.skillsfs-card {
+ background: #c7d3c5;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 50, 0, 0.15);
+
+}
+
+
+.skillsfs-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.skill-icon {
+  font-size: 1.5rem;
+  margin-right: 8px;
+  display: inline-block;
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #205c32;
+  border-radius: 6px;
+  transition: width 3s ease-in-out;
+}
+
+
+.soft-skills {
+  background: #c7d3c5;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 50, 0, 0.15);
+  min-width: 300px;
+   color: #0c2413;
+}
+
+.soft-skills h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+}
+
+.soft-skill-circles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 700px;
+  margin: auto;
+  margin-left: 30px;
+}
+
+.circle-container {
+  position: relative;
+  width: 100px;
+  height: 130px;
+  text-align: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: #eee;
+}
+
+.progress-ring-circle {
+  fill: none;
+  stroke: #205c32;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.3s ease-out;
+}
+.circle-label {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}

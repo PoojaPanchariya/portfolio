@@ -1,0 +1,22 @@
+.custom-typewriter {
+  font-size: 2rem;
+  font-weight: 600;
+  color:  #032b21;
+  margin-left: 80px;
+}
+
+.custom-typewriter .highlight {
+  color:  #8b0618; 
+  
+}
+
+.custom-typewriter .cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

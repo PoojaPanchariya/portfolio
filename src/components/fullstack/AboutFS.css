@@ -1,0 +1,202 @@
+.aboutme-fs {
+  padding: 30px 5% 60px; /* reduced top padding */
+  color: #032b21;
+  
+}
+
+.aboutme-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.aboutme-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutme-image {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.aboutme-image:hover {
+  transform: scale(1.05);
+}
+
+.aboutme-content {
+  flex: 2;
+  max-width: 600px;
+}
+.aboutme-content h2,
+.aboutme-content p {
+  opacity: 0; 
+}
+
+.aboutme-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+   animation: fadeSlideIn 1s ease forwards;
+}
+
+
+
+
+@keyframes blinkCursor {
+  0%, 100% { border-right: 2px solid transparent; }
+  50% { border-right: 2px solid #20c997; }
+}
+
+
+.aboutme-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+   animation: fadeSlideIn 1.3s ease forwards;
+}
+.typing-highlight {
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(139, 6, 24, 0.3);
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .aboutme-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutme-image {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .aboutme-content {
+    padding: 0 10px;
+  }
+  .typing-highlight {
+    text-align: center;
+  }
+
+  .hireme-btn {
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+/* Skill Tags */
+.skills-tags {
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 45px;
+}
+
+.skills-tags span {
+  background-color: #e0f7f4;
+  color: #055b4e;
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 0.8s ease-in both;
+  animation-delay: calc(var(--i) * 0.1s); /* staggered if used with inline style */
+}
+
+.skills-tags span:hover {
+  background-color: #c4efe9;
+  animation: wiggle 0.4s ease;
+}
+
+/* Hire Me Button */
+.hireme-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #20c997, #198754);
+  color: rgb(34, 2, 2);
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  animation: pulse 2.5s infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hireme-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #198754, #157347);
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(1deg); }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(32, 201, 151, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(32, 201, 151, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(32, 201, 151, 0);
+  }
+}
+/* Center typing animation and Hire Me button on large screens */
+@media (min-width: 992px) {
+  .aboutme-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutme-content h2 {
+    margin-bottom: 1rem;
+  }
+
+  .hireme-btn {
+    margin-top: 1.5rem;
+  }
+}

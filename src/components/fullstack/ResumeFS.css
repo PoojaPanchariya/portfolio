@@ -1,0 +1,144 @@
+.resumefs-section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+
+.resumefs-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+   color: #1f2d1f;
+}
+
+.resumefs-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+.resumefs-column {
+  flex: 1 1 350px;
+ background: #c7d3c5;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s ease;
+}
+
+.resumefs-column:hover {
+  transform: translateY(-5px);
+}
+
+.resumefs-subheading {
+  font-size: 1.5rem;
+  color: #609454;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.icon {
+  color: #6da761;
+}
+
+.resumefs-item {
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #8fb387;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.resumefs-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: #8fb387;
+  border-radius: 50%;
+}
+
+.resumefs-item h4 {
+  font-size: 1.1rem;
+  color: #2e3a2c;
+  margin-bottom: 0.25rem;
+  font-weight: 800;
+}
+
+.resumefs-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.resumefs-item span {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.resumefs-buttons {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  
+}
+
+.resume-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-btn {
+ background: linear-gradient(135deg, #20c997, #198754);
+ color: rgb(34, 2, 2);
+}
+
+.view-btn:hover {
+     transform: scale(1.1);
+  background: linear-gradient(135deg, #198754, #157347);
+  color: rgb(34, 2, 2);
+}
+
+.download-btn {
+ background: linear-gradient(135deg, #20c997, #198754);
+  color: rgb(34, 2, 2);
+}
+
+.download-btn:hover {
+     transform: scale(1.1);
+   background: linear-gradient(135deg, #198754, #157347);
+   color: rgb(34, 2, 2);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}

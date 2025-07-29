@@ -1,0 +1,31 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+.fullstack-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f1f7f2, #b5c7b4, #8fb387); 
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+ 
+}
+
+
+.section {
+  padding: 60px 20px;
+}
+
