@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
-  "homepage": "https://poojapanchariya.github.io/portfolio",
+  "homepage": "https://PoojaPanchariya.github.io/portfolio",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
