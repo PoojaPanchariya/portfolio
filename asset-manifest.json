@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1787d413.css",
-    "main.js": "/portfolio/static/js/main.294e029e.js",
+    "main.css": "/portfolio/static/css/main.1571a474.css",
+    "main.js": "/portfolio/static/js/main.20622cec.js",
     "static/media/pooja.png": "/portfolio/static/media/pooja.1223937b4a0790b0bf57.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.1e9998397b13b7e1e29f.png",
     "index.html": "/portfolio/index.html",
-    "main.1787d413.css.map": "/portfolio/static/css/main.1787d413.css.map",
-    "main.294e029e.js.map": "/portfolio/static/js/main.294e029e.js.map"
+    "main.1571a474.css.map": "/portfolio/static/css/main.1571a474.css.map",
+    "main.20622cec.js.map": "/portfolio/static/js/main.20622cec.js.map"
   },
   "entrypoints": [
-    "static/css/main.1787d413.css",
-    "static/js/main.294e029e.js"
+    "static/css/main.1571a474.css",
+    "static/js/main.20622cec.js"
   ]
 }
