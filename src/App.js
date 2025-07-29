@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import DataAnalyst from "./pages/DataAnalyst";
 import FullStack from "./pages/FullStack";
@@ -13,7 +13,7 @@ console.log("DataAnalyst:", DataAnalyst);                // ✅ should show the 
 
 function App() {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/data-analyst" element={<DataAnalyst />} />

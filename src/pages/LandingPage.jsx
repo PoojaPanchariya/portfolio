@@ -2,6 +2,7 @@
 import React from "react";
 import "./LandingPage.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -19,12 +20,8 @@ function LandingPage() {
         </p>
 
         <div className="landing-buttons">
-          <a href="/portfolio/full-stack" className="landing-btn">
-            Full Stack
-          </a>
-          <a href="/portfolio/data-analyst" className="landing-btn">
-            Data Analyst
-          </a>
+          <Link to="/full-stack" className="landing-btn">Full Stack</Link>
+         <Link to="/data-analyst" className="landing-btn">Data Analyst</Link>
         </div>
 
         <div className="social-icons">
