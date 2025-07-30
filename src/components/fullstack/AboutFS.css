@@ -200,3 +200,54 @@
     margin-top: 1.5rem;
   }
 }
+@media (max-width: 480px) {
+  .aboutme-container {
+    padding: 0 1rem;
+  }
+
+  .aboutme-content {
+    padding: 0 10px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .aboutme-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .aboutme-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .typing-highlight {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    
+  }
+
+  .aboutme-image {
+    width: 90%;
+    max-width: 260px;
+    height: auto;
+  }
+
+  .skills-tags {
+    justify-content: center;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .skills-tags span {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .hireme-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+}

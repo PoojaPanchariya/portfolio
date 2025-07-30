@@ -15,6 +15,14 @@ const ProjectsFS = () => {
       embed: "https://comfotel.vercel.app/",
       github: "https://github.com/PoojaPanchariya/hotel-booking",
     },
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "A modern and responsive portfolio built with React showcasing my Data Analyst and Full Stack Developer profiles, projects, and contact details. Features custom animations, dark mode, and glassmorphism design.",
+      link: "https://poojapanchariya.github.io/portfolio/", 
+      github: "https://github.com/PoojaPanchariya/portfolio", 
+    },
+
     // Add more projects here
   ];
 

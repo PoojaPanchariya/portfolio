@@ -136,3 +136,14 @@
   color: #333;
   font-size: 1rem;
 }
+@media (max-width: 480px) {
+  .circle-container {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .circle-container{
+   
+    margin-left: 60px;
+  }
+}

@@ -1,23 +1,23 @@
 .contactfs-section {
-
   padding: 4rem 1rem;
   color: #2c2c2c;
   text-align: center;
 }
 
 .contactfs-heading {
-   text-align: center;
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   font-weight: bold;
-   color: #1f2d1f;
+  color: #1f2d1f;
 }
 
 .contactfs-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .connectfs-card,
@@ -26,10 +26,12 @@
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   padding: 2rem;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
   backdrop-filter: blur(12px);
   transition: all 0.3s ease-in-out;
   animation: fadeUp 1s ease;
+  box-sizing: border-box;
 }
 
 .connectfs-card:hover,
@@ -92,7 +94,6 @@
   color: inherit !important;
 }
 
-
 .social-item.email {
   color: #c71610;
 }
@@ -117,6 +118,8 @@
   background-color: rgba(255, 255, 255, 0.6);
   color: #2c2c2c;
   backdrop-filter: blur(5px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contactfs-form input::placeholder,
@@ -127,8 +130,8 @@
 .contactfs-form button {
   padding: 0.9rem;
   font-size: 1.4rem;
- background: linear-gradient(135deg, #20c997, #198754);
- color: rgb(34, 2, 2);
+  background: linear-gradient(135deg, #20c997, #198754);
+  color: rgb(34, 2, 2);
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -137,7 +140,7 @@
 
 .contactfs-form button:hover {
   transform: scale(1.1);
- background: linear-gradient(135deg, #198754, #157347);
+  background: linear-gradient(135deg, #198754, #157347);
 }
 
 /* Animations */
@@ -152,10 +155,55 @@
   }
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .contactfs-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .contactfs-heading {
+    font-size: 2rem;
+  }
+
+  .connect-title {
+    font-size: 1.5rem;
+  }
+
+  .contactfs-form button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactfs-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .connectfs-card,
+  .contactfs-card {
+    padding: 1.2rem;
+  }
+
+  .contactfs-heading {
+    font-size: 1.8rem;
+  }
+
+  .connect-title {
+    font-size: 1.3rem;
+  }
+
+  .contactfs-form button {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  .social-item {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .social-item .icons {
+    font-size: 1.2rem;
   }
 }
